@@ -1,5 +1,9 @@
 
 import '../assets/CSS/layout.css';
+import {useState} from 'react';
+import {flowers} from './FlowerDB';
+import Product from './Product';
+import Cart from './Cart';
 
 
 export default function Products(){
@@ -14,6 +18,9 @@ export default function Products(){
                 <div className="grid-container">
                     {
                         //product
+                        flowers.map((flower)=>(
+                            <Product flower={flower} ></Product>
+                        ))
                     }
                 </div>
 

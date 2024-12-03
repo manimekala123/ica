@@ -1,6 +1,17 @@
 import '../assets/CSS/layout.css';
-export default function Product(){
-    
+import {useState} from 'react';
+
+export default function Product(props){
+    const[quantity,setQuantity] = useState(0);
+    const addItem = () =>{
+        if(quantity>0){
+            const item={
+                name:props.flower.name,
+                quantity:quantity,
+                price:props.flower.price*quantity,
+            }
+        }
+    }
     return(
         <div className="grid-item">
 
