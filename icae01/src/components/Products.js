@@ -7,6 +7,8 @@ import Cart from './Cart';
 
 
 export default function Products(){
+    const[cart,setCart]=useState([]);
+    const[grandPrice,setGrandPrice]=useState(0);
    
     return(
         <>
@@ -19,7 +21,7 @@ export default function Products(){
                     {
                         //product
                         flowers.map((flower)=>(
-                            <Product flower={flower} ></Product>
+                            <Product flower={flower} setCart={setCart} setGprice={setGrandPrice} gPrice={grandPrice}></Product>
                         ))
                     }
                 </div>
